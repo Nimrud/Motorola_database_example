@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "orders")
 @Getter
 public class Order {
 
@@ -22,9 +22,8 @@ public class Order {
     public Order() {
     }
 
-    public Order(BigDecimal totalPrice, LocalDate date, Customer customer) {
+    public Order(BigDecimal totalPrice, LocalDate date) {
         this.totalPrice = totalPrice;
         this.date = date;
-        this.customer = customer;
     }
 }
